@@ -7,7 +7,7 @@ Following a youtube tutorial series[^1] to create a full stack exercise tracking
 - Finished tutorial #8
 
 ### 1/8/2024
-- 
+- Finished tutorial up to #9, to resume at [tutorial #10](https://www.youtube.com/watch?v=tRmeik-IpUQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=10)
 
 
 
