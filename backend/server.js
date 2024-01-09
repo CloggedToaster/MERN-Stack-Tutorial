@@ -1,6 +1,8 @@
 //npm install dotenv
 //must call this from the same directory with .env file
 require('dotenv').config()
+//npm install cors
+const CORS = require('cors')
 
 //npm install express
 const express = require('express')
@@ -14,6 +16,7 @@ const app = express()
 
 //# MIDDLEWARE #
 app.use(express.json())
+app.use(CORS())
 
 //# ROUTES #
 app.use('/api/workouts/', workoutRoutes)
