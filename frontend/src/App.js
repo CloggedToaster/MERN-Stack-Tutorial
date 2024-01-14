@@ -10,7 +10,6 @@ function App() {
         {/* all pages and components must be container within the BrowserRouter component */}
         <BrowserRouter>
         <Navbar></Navbar>
-        
         <div className="pages">
             <Routes>
                 <Route
@@ -18,9 +17,6 @@ function App() {
                     element={ <Home /> }  
                 />
             </Routes>
-                
-              
-
         </div>
       </BrowserRouter>
     </div>

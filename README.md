@@ -9,7 +9,11 @@ Following a youtube tutorial series[^1] to create a full stack exercise tracking
 ### 1/8/2024
 - Finished tutorial up to #9, to resume at [tutorial #10](https://www.youtube.com/watch?v=tRmeik-IpUQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=10)
 
+### 1/14/2024
+- Finished tutorial up to #12, to resumse at [tutorial #13](https://www.youtube.com/watch?v=tRmeik-IpUQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=13)
+- Drafted up list of features to add after the tutorial is complete
 
 
 [^1]: [MERN Stack Tutorial Series](https://www.youtube.com/watch?v=98BzS5Oz5E4&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE)
 
+    

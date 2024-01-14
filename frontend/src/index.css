@@ -5,15 +5,20 @@
 :root {
   --primary: #0F1035;
   --error: #8f0303;
-  --text: #DCF2F1;
+  --success: #4CAF50;
+  --text-primary: #DCF2F1;
+  --text-secondary: #0F1035;
+  --background-1: #365486;
+  --background-2: #0F1035;
+  --background-3: #7FC7D9;
 }
 body {
-  background: #7FC7D9;
+  background: var(--background-3);
   margin: 0;
   font-family: "Roboto";
 }
 header {
-  background: #365486;
+  background: var(--background-2);
 }
 header .container {
   max-width: 1400px;
@@ -24,7 +29,7 @@ header .container {
   justify-content: space-between;
 }
 header a {
-  color: #DCF2F1;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -42,9 +47,9 @@ header a {
   gap: 100px;
 }
 .workout-details {
-  background-color: #365486;
-  color: var(--text);
-  border-radius: 40px;
+  background-color: var(--background-1);
+  color: var(--text-primary);
+  border-radius: 15px;
   margin: 20px auto;
   padding: 20px;
   position: relative;
@@ -53,7 +58,7 @@ header a {
 .workout-details h4 {
   margin: 0 0 10px 0;
   font-size: 1.2em;
-  color: var(--primary);
+  color: var(--text-primary);
 }
 .workout-details p {
   margin: 0;
@@ -68,6 +73,55 @@ header a {
   background: var(--primary);
   padding: 6px;
   border-radius: 50%;
-  color: var(--text);
+  color: var(--text-primary);
 }
 
+label, input {
+  display: block;
+}
+.create input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+form button{
+  background-color: var(--background-1);
+  color: var(--text-primary);  
+  font-family: "Roboto";
+  font-size: 1.1em;
+}
+.create h3 { 
+  margin: 0 0 10px 0;
+  font-size: 1.2em; 
+  color: var(--text-secondary);
+  font-family: "Roboto";
+}
+.create label { 
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--text-secondary);
+  font-family: "Roboto";
+}
+div.error {
+  background-color: var(--error);
+  color: var(--text-primary);
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.success {
+  background-color: var(--success);
+  color: var(--text-primary);
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
