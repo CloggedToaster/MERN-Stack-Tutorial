@@ -7,6 +7,9 @@ const WorkoutForm = () => {
     const [weight, setWeight] = useState('')
     const [reps, setReps] = useState('')
     const [error, setError] = useState(null)
+    const [emptyFields, setEmptyFields] = useState([])
+
+
 
     const handleSubmit = async (e) => {
         //stops webpage from reloading
@@ -29,6 +32,8 @@ const WorkoutForm = () => {
         if(!response.ok){
             //if there was an error set the error to the json error
             setError(json.error)
+            setEmptyFields(json.emptyFields)
+            console.log(json.emptyFields)
         }
         if(response.ok){
             //reset all the input fields
@@ -37,6 +42,7 @@ const WorkoutForm = () => {
             setReps('')
             //if there is no error; ensure that error is null
             setError(null)
+            setEmptyFields([])
             console.log('new workout added!', json)
             //call local state and 
             dispatch({type:"CREATE_WORKOUT", payload: json})
@@ -52,22 +58,27 @@ const WorkoutForm = () => {
                 type="text"
                 onChange={(e) => setTitle(e.target.value)}
                 value={title}
+                //if title is in the empty fields, set the class to be 'error' so that the CSS would show as an error
+                className={emptyFields.includes('title') ? 'error' : ''}
             />
             <label>Weight:</label>
             <input
                 type="number"
                 onChange={(e) => setWeight(e.target.value)}
                 value={weight}
+                //if weight is in the empty fields, set the class to be 'error' so that the CSS would show as an error
+                className={emptyFields.includes('weight') ? 'error' : ''}
             />
             <label>Reps:</label>
             <input
                 type="number"
                 onChange={(e) => setReps(e.target.value)}
                 value={reps}
+                //if reps is in the empty fields, set the class to be 'error' so that the CSS would show as an error
+                className={emptyFields.includes('reps') ? 'error' : ''}
             />
             <button>Add Workout</button>
             {error && <div className="error">{error}</div>}
-            {/* {!error && <div className="success">Successfully created!</div>} */}
         </form>
     )
 

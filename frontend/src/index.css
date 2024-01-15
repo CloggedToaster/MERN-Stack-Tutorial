@@ -70,7 +70,7 @@ header a {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background: var(--primary);
+  background: var(--error);
   padding: 6px;
   border-radius: 50%;
   color: var(--text-primary);
@@ -79,21 +79,26 @@ header a {
 label, input {
   display: block;
 }
-.create input {
+input {
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
+  font-family: "Roboto";
+}
+input.error{
+  border: 2px solid var(--error);
   font-family: "Roboto";
 }
 form button{
   background-color: var(--background-1);
   color: var(--text-primary);  
   font-family: "Roboto";
-  font-size: 1.1em;
+  font-size: 1.2em;
+  border-radius: 8px;
 }
 .create h3 { 
   margin: 0 0 10px 0;
