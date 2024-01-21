@@ -1,18 +1,20 @@
 import { useWorkoutContext } from "../hooks/useWorkoutContext"
 
-// date-fns
+// npm install date-fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
+// the component accepts a prop (workout)
 const WorkoutDetails = ({ workout }) =>{
-    const {dispatch} = useWorkoutContext()
+    const {dispatch} = useWorkoutContext();
 
+    // called for delete icon onclick
     const handleClick = async() => {
         const response = await fetch('/api/workouts/' + workout._id, {
-            method: "DELETE"
+            method: "DELETE",
         })
         const json = await response.json()
         if(response.ok){
-            dispatch({type: 'DELETE_WORKOUT', payload: json})
+            dispatch({type: 'DELETE_WORKOUT', payload: json});
         }
     }
 
@@ -23,9 +25,10 @@ const WorkoutDetails = ({ workout }) =>{
             <p><strong>Weight: </strong>{workout.weight}</p>
             <p>{formatDistanceToNow(new Date(workout.createdAt), {addSuffix: true})}</p>
 
+            {/* material design causes "Delete" to become a trashcan icon; the "handleClick" function is called on click */}
             <span className="material-symbols-outlined delete" onClick={handleClick}>Delete</span>
         </div>
     )
 }
 
-export default WorkoutDetails
+export default WorkoutDetails;
